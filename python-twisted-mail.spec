@@ -6,6 +6,7 @@ Source0:        http://tmrc.mit.edu/mirror/twisted/Mail/0.3/TwistedMail-%{versio
 License:        MIT
 Group:          Development/Python
 URL:            http://twistedmatrix.com/projects/web/
+BuildRoot:      %{_tmppath}/%{name}-buildroot
 BuildRequires:	python-devel python-twisted-core
 Requires:       python-twisted-core
 # for mail/relaymanager.py
