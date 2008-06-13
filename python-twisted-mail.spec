@@ -1,11 +1,14 @@
+%define version 8.1.0
+%define rel 1
+
 Summary:        An STMP/POP2/IMAP protocol implementation together with clients and servers
 Name:           python-twisted-mail
-Version:        0.3.0
-Release:        %mkrel 2
-Source0:        http://tmrc.mit.edu/mirror/twisted/Mail/0.3/TwistedMail-%{version}.tar.bz2
+Version:        %version
+Release:        %mkrel %rel
+Source0:        http://tmrc.mit.edu/mirror/twisted/Mail/8.1/TwistedMail-%{version}.tar.bz2
 License:        MIT
 Group:          Development/Python
-URL:            http://twistedmatrix.com/projects/web/
+URL:            http://twistedmatrix.com/trac/wiki/TwistedMail
 BuildRoot:      %{_tmppath}/%{name}-buildroot
 BuildRequires:	python-devel python-twisted-core
 Requires:       python-twisted-core
