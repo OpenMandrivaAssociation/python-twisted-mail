@@ -1,5 +1,5 @@
 %define version 8.1.0
-%define rel 1
+%define rel 2
 
 Summary:        An STMP/POP2/IMAP protocol implementation together with clients and servers
 Name:           python-twisted-mail
