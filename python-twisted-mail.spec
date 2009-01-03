@@ -1,5 +1,5 @@
-%define version 8.1.0
-%define rel 2
+%define version 8.2.0
+%define rel 1
 
 Summary:        An STMP/POP2/IMAP protocol implementation together with clients and servers
 Name:           python-twisted-mail
@@ -16,10 +16,10 @@ Requires:       python-twisted-core
 Requires:       python-twisted-names
 
 %description
-Twisted Mail contains high-level, efficient protocol implementations for both 
-clients and servers of SMTP, POP3, and IMAP4. Additionally, it contains an 
-"out of the box" combination SMTP/POP3 virtual-hosting mail server. Also 
-included is a read/write Maildir implementation and a basic Mail Exchange 
+Twisted Mail contains high-level, efficient protocol implementations for both
+clients and servers of SMTP, POP3, and IMAP4. Additionally, it contains an
+"out of the box" combination SMTP/POP3 virtual-hosting mail server. Also
+included is a read/write Maildir implementation and a basic Mail Exchange
 calculator (depends on Twisted Names).
 
 %prep
