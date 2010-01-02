@@ -1,11 +1,13 @@
-%define version 8.2.0
+%define version 9.0.0
 %define rel 1
+%define mainver %(echo %{version} | sed -e 's/\\([0-9]*\\.[0-9]*\\)\\.[0-9]*/\\1/')
+
 
 Summary:        An STMP/POP2/IMAP protocol implementation together with clients and servers
 Name:           python-twisted-mail
 Version:        %version
 Release:        %mkrel %rel
-Source0:        http://tmrc.mit.edu/mirror/twisted/Mail/8.1/TwistedMail-%{version}.tar.bz2
+Source0:        http://tmrc.mit.edu/mirror/twisted/Mail/%{mainver}/TwistedMail-%{version}.tar.bz2
 License:        MIT
 Group:          Development/Python
 URL:            http://twistedmatrix.com/trac/wiki/TwistedMail
