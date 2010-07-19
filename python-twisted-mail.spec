@@ -1,12 +1,13 @@
-%define version 10.0.0
+%define name python-twisted-mail
+%define version 10.1.0
 %define rel 1
 %define mainver %(echo %{version} | sed -e 's/\\([0-9]*\\.[0-9]*\\)\\.[0-9]*/\\1/')
 
 
 Summary:        An STMP/POP2/IMAP protocol implementation together with clients and servers
-Name:           python-twisted-mail
-Version:        %version
-Release:        %mkrel %rel
+Name:           %{name}
+Version:        %{version}
+Release:        %mkrel %{rel}
 Source0:        http://tmrc.mit.edu/mirror/twisted/Mail/%{mainver}/TwistedMail-%{version}.tar.bz2
 License:        MIT
 Group:          Development/Python
@@ -25,20 +26,20 @@ included is a read/write Maildir implementation and a basic Mail Exchange
 calculator (depends on Twisted Names).
 
 %prep
-%setup -q -n TwistedMail-%version
+%setup -q -n TwistedMail-%{version}
 
 %build
 %__python setup.py build
 
 %install
-%__rm -rf %buildroot
-%__python setup.py install --root  %buildroot --install-purelib=%py_platsitedir
+%__rm -rf %{buildroot}
+%__python setup.py install --root=%{buildroot} --install-purelib=%{py_platsitedir}
 
-%__install -d                      %buildroot%_mandir/man1
-%__install -m 644 doc/man/*.1      %buildroot%_mandir/man1
+%__install -d %{buildroot}%{_mandir}/man1
+%__install -m 644 doc/man/*.1 %{buildroot}%{_mandir}/man1
 
 %clean
-%__rm -rf %buildroot
+%__rm -rf %{buildroot}
 
 %files
 %defattr(0755,root,root,0755)
@@ -50,5 +51,4 @@ calculator (depends on Twisted Names).
 %py_platsitedir/twisted/plugins/*
 %py_platsitedir/*.egg-info
 %_mandir/man1/*
-
 
