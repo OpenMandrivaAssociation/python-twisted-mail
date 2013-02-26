@@ -1,5 +1,10 @@
 %define mainver %(echo %{version} | sed -e 's/\\([0-9]*\\.[0-9]*\\)\\.[0-9]*/\\1/')
 
+# There is no debug here, but can't build as noarch,
+# since some 'twisted' modules are arch-dependent and all these modules
+# should be located in the same place
+%define debug_package %{nil}
+
 Summary:        An STMP/POP2/IMAP protocol implementation together with clients and servers
 Name:           python-twisted-mail
 Version:        12.2.0
