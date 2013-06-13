@@ -1,3 +1,5 @@
-sources:
-  "TwistedMail-10.1.0.tar.bz2": 641ff222c9ece8af6db07f78d74c44b9db35463b
+removed_sources:
+  TwistedMail-10.1.0.tar.bz2: 641ff222c9ece8af6db07f78d74c44b9db35463b
   TwistedMail-12.2.0.tar.bz2: 835bc3fe2e0aed3d4a9a10a28504b655f9b22bff
+sources:
+  TwistedMail-13.0.0.tar.bz2: ca790fbe2e069fbaf651d5a5eb1832055e6c3ccb

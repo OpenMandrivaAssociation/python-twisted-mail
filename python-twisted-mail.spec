@@ -7,9 +7,9 @@
 
 Summary:        An STMP/POP2/IMAP protocol implementation together with clients and servers
 Name:           python-twisted-mail
-Version:        12.2.0
+Version:        13.0.0
 Release:        1
-Source0:        http://tmrc.mit.edu/mirror/twisted/Mail/%{mainver}/TwistedMail-%{version}.tar.bz2
+Source0:        http://twistedmatrix.com/Releases/Mail/13.0/TwistedMail-%{version}.tar.bz2
 License:        MIT
 Group:          Development/Python
 URL:            http://twistedmatrix.com/trac/wiki/TwistedMail
