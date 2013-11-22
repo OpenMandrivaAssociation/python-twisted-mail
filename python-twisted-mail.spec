@@ -5,18 +5,19 @@
 # should be located in the same place
 %define debug_package %{nil}
 
-Summary:        An STMP/POP2/IMAP protocol implementation together with clients and servers
-Name:           python-twisted-mail
-Version:        13.0.0
-Release:        1
-Source0:        http://twistedmatrix.com/Releases/Mail/13.0/TwistedMail-%{version}.tar.bz2
-License:        MIT
-Group:          Development/Python
-URL:            http://twistedmatrix.com/trac/wiki/TwistedMail
-BuildRequires:	python-devel python-twisted-core
-Requires:       python-twisted-core
+Summary:	An STMP/POP2/IMAP protocol implementation together with clients and servers
+Name:		python-twisted-mail
+Version:	13.0.0
+Release:	1
+License:	MIT
+Group:		Development/Python
+Url:		http://twistedmatrix.com/trac/wiki/TwistedMail
+Source0:	http://twistedmatrix.com/Releases/Mail/13.0/TwistedMail-%{version}.tar.bz2
+BuildRequires:	python-twisted-core
+BuildRequires:	pkgconfig(python)
+Requires:	python-twisted-core
 # for mail/relaymanager.py
-Requires:       python-twisted-names
+Requires:	python-twisted-names
 
 %description
 Twisted Mail contains high-level, efficient protocol implementations for both
@@ -34,16 +35,17 @@ calculator (depends on Twisted Names).
 %install
 %__python setup.py install --root=%{buildroot} --install-purelib=%{py_platsitedir}
 
-%__install -d %{buildroot}%{_mandir}/man1
-%__install -m 644 doc/man/*.1 %{buildroot}%{_mandir}/man1
+install -d %{buildroot}%{_mandir}/man1
+install -m 644 doc/man/*.1 %{buildroot}%{_mandir}/man1
 
 %files
 %defattr(0755,root,root,0755)
-%_bindir/*
+%{_bindir}/*
 %defattr(0644,root,root,0755)
 %doc LICENSE README doc/*
-%dir %py_platsitedir/twisted/mail
-%py_platsitedir/twisted/mail/*
-%py_platsitedir/twisted/plugins/*
-%py_platsitedir/*.egg-info
-%_mandir/man1/*
+%dir %{py_platsitedir}/twisted/mail
+%{py_platsitedir}/twisted/mail/*
+%{py_platsitedir}/twisted/plugins/*
+%{py_platsitedir}/*.egg-info
+%{_mandir}/man1/*
+
