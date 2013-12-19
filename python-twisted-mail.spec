@@ -7,12 +7,12 @@
 
 Summary:	An STMP/POP2/IMAP protocol implementation together with clients and servers
 Name:		python-twisted-mail
-Version:	13.0.0
-Release:	5
+Version:	13.1.0
+Release:	1
 License:	MIT
 Group:		Development/Python
 Url:		http://twistedmatrix.com/trac/wiki/TwistedMail
-Source0:	http://twistedmatrix.com/Releases/Mail/13.0/TwistedMail-%{version}.tar.bz2
+Source0:	http://twistedmatrix.com/Releases/Mail/13.1/TwistedMail-%{version}.tar.bz2
 BuildRequires:	python-twisted-core
 BuildRequires:	pkgconfig(python)
 Requires:	python-twisted-core
@@ -48,4 +48,5 @@ install -m 644 doc/man/*.1 %{buildroot}%{_mandir}/man1
 %{py_platsitedir}/twisted/plugins/*
 %{py_platsitedir}/*.egg-info
 %{_mandir}/man1/*
+
 
